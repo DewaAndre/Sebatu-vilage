@@ -7,10 +7,11 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', function () {
-    return response()->json([
-        'status' => 'Laravel OK',
-        'platform' => 'Vercel',
-    ]);
+    return response(
+        '<h1>Laravel berjalan di Vercel</h1>',
+        200,
+        ['Content-Type' => 'text/html']
+    );
 });
 
 
