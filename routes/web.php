@@ -7,8 +7,12 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', function () {
-    return response('Laravel view service OK', 200);
+    return response()->json([
+        'status' => 'Laravel OK',
+        'platform' => 'Vercel',
+    ]);
 });
+
 
 
 // wisata
