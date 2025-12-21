@@ -11,15 +11,12 @@
     ],
     "env": {
       "APP_ENV": "production",
-      "APP_DEBUG": "true",
-      "APP_URL": "https://sebatu-vilage.vercel.app",
+      "APP_DEBUG": "false",
       "APP_KEY": "base64:TGaVaXwhWgjn9akhE4SCSIjGG/cQqvICUQ+PgLA3Bs0=",
 
       "CACHE_STORE": "array",
-      "SESSION_DRIVER": "array",
-      "FILESYSTEM_DISK": "public",
-
-      "VIEW_COMPILED_PATH": "/tmp",
-      "LOG_CHANNEL": "stderr"
+      "SESSION_DRIVER": "cookie",
+      "LOG_CHANNEL": "stderr",
+      "VIEW_COMPILED_PATH": "/tmp"
     }
   }
