@@ -3,8 +3,10 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('home');
+    return response()->view('home')
+        ->header('Content-Type', 'text/html');
 });
+
 
 // wisata
 Route::get('/wisata', function () {
