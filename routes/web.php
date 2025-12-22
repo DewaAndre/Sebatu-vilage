@@ -3,7 +3,15 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return 'INI DARI WEB.PHP';
+    return view('home');
+});
+
+Route::get('/', function () {
+    return response()->json([
+        'status' => 'OK',
+        'source' => 'routes/web.php',
+        'time' => now()
+    ]);
 });
 
 
