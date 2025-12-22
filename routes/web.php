@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return 'Laravel OK di Vercel';
+    return 'Laravel OK di Vercel - TEST 123';
 });
 
 
