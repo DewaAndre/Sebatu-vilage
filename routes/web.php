@@ -3,8 +3,9 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('home');
+    return 'INI DARI WEB.PHP';
 });
+
 
 // wisata
 Route::get('/wisata', function () {
