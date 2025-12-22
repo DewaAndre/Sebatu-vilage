@@ -5,7 +5,7 @@ use Illuminate\Http\Request;
 
 define('LARAVEL_START', microtime(true));
 
-// Maintenance mode
+// Maintenance
 if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php')) {
     require $maintenance;
 }
@@ -14,14 +14,22 @@ if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php'))
 require __DIR__.'/../vendor/autoload.php';
 
 // Bootstrap app
-/** @var Application $app */
 $app = require_once __DIR__.'/../bootstrap/app.php';
 
-// HANDLE REQUEST MANUAL (WAJIB UNTUK VERCEL)
 $request = Request::capture();
 $response = $app->handle($request);
 
-// ⛔ INI YANG KEMARIN HILANG
-$response->send();
+/*
+|--------------------------------------------------------------------------
+| 🔥 PAKSA CONTENT-TYPE HTML (WAJIB UNTUK VERCEL)
+|--------------------------------------------------------------------------
+*/
+$response->headers->set('Content-Type', 'text/html; charset=UTF-8');
 
+/*
+|--------------------------------------------------------------------------
+| SEND RESPONSE
+|--------------------------------------------------------------------------
+*/
+$response->send();
 $app->terminate($request, $response);
