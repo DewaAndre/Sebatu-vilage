@@ -2,16 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-// Route::get('/', function () {
-//     return view('home');
-// });
-
-
 Route::get('/', function () {
-    return 'Laravel OK di Vercel - TEST 123';
+    return view('home');
 });
-
-
 
 // wisata
 Route::get('/wisata', function () {
