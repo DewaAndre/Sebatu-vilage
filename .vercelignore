@@ -1,1 +1,51 @@
-/vendor
+# =========================
+# NODE / FRONTEND
+# =========================
+node_modules
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.vite
+dist
+
+# =========================
+# LARAVEL STORAGE
+# =========================
+/storage/*.key
+/storage/logs/*
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+
+# =========================
+# LARAVEL CACHE (KEEP FOLDER)
+# =========================
+/bootstrap/cache/*
+!/bootstrap/cache/.gitignore
+
+# =========================
+# ENV & LOCAL FILES
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# TEST / DEV FILES
+# =========================
+/tests
+/.phpunit.result.cache
+
+# =========================
+# OS / EDITOR
+# =========================
+.DS_Store
+Thumbs.db
+.vscode
+.idea
+
+# =========================
+# GIT
+# =========================
+.git
+.gitignore
