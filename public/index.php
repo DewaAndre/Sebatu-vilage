@@ -5,17 +5,20 @@ use Illuminate\Http\Request;
 
 define('LARAVEL_START', microtime(true));
 
-require __DIR__ . '/../vendor/autoload.php';
+// Composer
+require __DIR__.'/../vendor/autoload.php';
 
-$app = require_once __DIR__ . '/../bootstrap/app.php';
+// Bootstrap
+$app = require_once __DIR__.'/../bootstrap/app.php';
 
-/** @var Kernel $kernel */
+// IMPORTANT: gunakan Kernel, BUKAN $app->handle()
 $kernel = $app->make(Kernel::class);
 
-$response = $kernel->handle(
-    $request = Request::capture()
-);
+$request = Request::capture();
+$response = $kernel->handle($request);
 
+// WAJIB
 $response->send();
 
+// Terminate
 $kernel->terminate($request, $response);
