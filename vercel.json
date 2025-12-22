@@ -1,23 +1,28 @@
 {
     "version": 2,
+    "framework": "other",
+
+    "buildCommand": "npm run build",
+    "outputDirectory": "public",
+
     "functions": {
-        "api/index.php": {
+      "api/index.php": {
         "runtime": "vercel-php@0.7.3"
-        }
+      }
     },
+
     "routes": [
-        {
-        "src": "/(.*)",
-        "dest": "/api/index.php"
-        }
+      { "src": "/build/(.*)", "dest": "/public/build/$1" },
+      { "src": "/(.*)", "dest": "/api/index.php" }
     ],
+
     "env": {
       "APP_ENV": "production",
       "APP_DEBUG": "false",
-      "APP_KEY": "base64:TGaVaXwhWgjn9akhE4SCSIjGG/cQqvICUQ+PgLA3Bs0=",
+      "APP_KEY": "base64:sbkfGMQZUAPwd9EBqq7MUx+8JHqpHDKnw7rK1A4bWJw=",
       "CACHE_STORE": "array",
+      "SESSION_DRIVER": "cookie",
       "VIEW_COMPILED_PATH": "/tmp",
-      "LOG_CHANNEL": "stderr",
-      "SESSION_DRIVER": "cookie"
+      "LOG_CHANNEL": "stderr"
     }
   }
