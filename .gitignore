@@ -23,3 +23,10 @@ Homestead.json
 Homestead.yaml
 Thumbs.db
 
+# =========================
+# LARAVEL BOOTSTRAP CACHE
+# =========================
+/bootstrap/cache/*
+!/bootstrap/cache/.gitignore
+
+
