@@ -6,12 +6,9 @@ use Illuminate\Support\Facades\Route;
 //     return view('home');
 // });
 
+
 Route::get('/', function () {
-    return response(
-        '<h1>Laravel berjalan di Vercel</h1>',
-        200,
-        ['Content-Type' => 'text/html']
-    );
+    return 'Laravel OK di Vercel';
 });
 
 

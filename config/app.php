@@ -95,11 +95,7 @@ return [
         Illuminate\Session\SessionServiceProvider::class,
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
-
-        /*
-         * ❌ JANGAN AKTIFKAN VIEW (Vercel TIDAK SUPPORT BLADE)
-         */
-        // Illuminate\View\ViewServiceProvider::class,
+        Illuminate\View\ViewServiceProvider::class,
     ],
 
     /*
